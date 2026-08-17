@@ -1,256 +1,171 @@
-<?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
   <channel>
     <title>Stuttgarter Zeitung – Stuttgart</title>
     <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/</link>
     <description>Aktuelle Nachrichten aus Stuttgart – Stuttgarter Zeitung</description>
     <language>de-DE</language>
-    <lastBuildDate>Mon, 17 Aug 2026 12:33:51 +0000</lastBuildDate>
-    <item>
-      <title>Baden-Württemberg</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/baden-wuerttemberg/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/baden-wuerttemberg/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Medizin (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/medizin/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/medizin/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Hochzeitsguide (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/hochzeitswelt/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/hochzeitswelt/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Rems-Murr-Kreis</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/rems-murr-kreis/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/rems-murr-kreis/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Innovation &amp; Hightech (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wirtschaft/innovation-hightech/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wirtschaft/innovation-hightech/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Jobs und Firmen (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wirtschaft/jobs-in-stuttgart/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wirtschaft/jobs-in-stuttgart/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Firmen im Fokus (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wirtschaft/firmen-im-fokus/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wirtschaft/firmen-im-fokus/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Stuttgarter Kickers</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/stuttgarter-kickers/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/stuttgarter-kickers/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Stuttgart / Filder</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Region Esslingen</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-esslingen/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-esslingen/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Region Böblingen</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-boeblingen/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-boeblingen/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Region Leonberg</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-leonberg/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-leonberg/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Region Ludwigsburg</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-ludwigsburg/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-ludwigsburg/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Lokalsport Fellbach</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-fellbach/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-fellbach/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Camperwelt (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wissen/camperwelt/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wissen/camperwelt/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Showroom (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wissen/showroom/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wissen/showroom/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Gesund in Stuttgart (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/gesund-in-stuttgart/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/gesund-in-stuttgart/</guid>
-      <description />
-    </item>
-    <item>
-      <title>Gartenideen (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/wissen/gartenideen/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wissen/gartenideen/</guid>
-      <description />
-    </item>
-    <item>
-      <title>AllgäuTopHotels (Anzeige)</title>
-      <link>https://www.stuttgarter-zeitung.de/reise/allgaeutophotels/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/reise/allgaeutophotels/</guid>
-      <description />
-    </item>
-    <item>
-      <title>„Die Besucher sind völlig verwirrt“ : Warum dieses Museum an der Nordsee voller Stuttgarter Raritäten steckt</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/die-besucher-sind-voellig-verwirrt-warum-dieses-museum-an-der-nordsee-voller-stuttgarter-raritaeten-steckt-79378589.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/die-besucher-sind-voellig-verwirrt-warum-dieses-museum-an-der-nordsee-voller-stuttgarter-raritaeten-steckt-79378589.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Feuerwehreinsatz in Ludwigsburg : Poolgebäude in Brand geraten – rund 40.000 Euro Sachschaden</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/ludwigsburg/feuerwehreinsatz-in-ludwigsburg-poolgebaeude-in-brand-geraten-rund-40000-euro-sachschaden-79391128.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/ludwigsburg/feuerwehreinsatz-in-ludwigsburg-poolgebaeude-in-brand-geraten-rund-40000-euro-sachschaden-79391128.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Trickbetrug in Stuttgart-Mühlhausen : Falsche Bankmitarbeiter verschaffen sich Fernzugriff auf Onlinebanking</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/trickbetrug-in-stuttgart-muehlhausen-falsche-bankmitarbeiter-verschaffen-sich-fernzugriff-auf-onlinebanking-79390891.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/trickbetrug-in-stuttgart-muehlhausen-falsche-bankmitarbeiter-verschaffen-sich-fernzugriff-auf-onlinebanking-79390891.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Einzigartiger Gastro-Event : Schlemmen in den Weinbergen – die wohl längste Tafel unter freiem Himmel</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/einzigartiger-gastro-event-schlemmen-in-den-weinbergen-die-wohl-laengste-tafel-unter-freiem-himmel-79389889.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/einzigartiger-gastro-event-schlemmen-in-den-weinbergen-die-wohl-laengste-tafel-unter-freiem-himmel-79389889.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Widerruf und Datenschutz</title>
-      <link>https://www.stuttgarter-zeitung.de/privacy</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/privacy</guid>
-      <description />
-    </item>
-    <item>
-      <title>Einbruch in Stuttgart-Nord : Unbekannter dringt in Einfamilienhaus ein – was hat ein 52-Jähriger damit zu tun?</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/einbruch-in-stuttgart-nord-unbekannter-dringt-in-einfamilienhaus-ein-was-hat-ein-52-jaehriger-damit-zu-tun-79390843.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/einbruch-in-stuttgart-nord-unbekannter-dringt-in-einfamilienhaus-ein-was-hat-ein-52-jaehriger-damit-zu-tun-79390843.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Streit in Stuttgart-Ost eskaliert : 35-Jähriger greift 19-Jährigen mit Messer an – Frau will schlichten und wird verletzt</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/streit-in-stuttgart-ost-eskaliert-35-jaehriger-greift-19-jaehrigen-mit-messer-an-frau-will-schlichten-und-wird-verletzt-79390782.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/streit-in-stuttgart-ost-eskaliert-35-jaehriger-greift-19-jaehrigen-mit-messer-an-frau-will-schlichten-und-wird-verletzt-79390782.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Wettervorhersage : Warum kommt kein Gewitter?</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/warum-kommt-kein-gewitter-stuttgart-und-co-79390418.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/warum-kommt-kein-gewitter-stuttgart-und-co-79390418.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Zwergflusspferde am Neckar : Jetzt drängt die Wilhelma - doch warum ist Stuttgarts Vorzeigeprojekt immer noch nicht umgesetzt?</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/zwergflusspferde-am-neckar-jetzt-draengt-die-wilhelma-doch-warum-ist-stuttgarts-vorzeigeprojekt-immer-noch-nicht-umgesetzt-79387868.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/zwergflusspferde-am-neckar-jetzt-draengt-die-wilhelma-doch-warum-ist-stuttgarts-vorzeigeprojekt-immer-noch-nicht-umgesetzt-79387868.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Wetterumschwung in Stuttgart : 25 Grad und Regen erwartet – ist die Sommerhitze jetzt vorbei?</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/wetterumschwung-in-stuttgart-25-grad-und-regen-erwartet-ist-die-sommerhitze-jetzt-vorbei-79390053.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/wetterumschwung-in-stuttgart-25-grad-und-regen-erwartet-ist-die-sommerhitze-jetzt-vorbei-79390053.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Kreis Esslingen : Besonderer Garten: In Kirchheim verbirgt sich ein historischer Schatz</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/esslingen/besonderer-garten-in-kirchheim-verbirgt-sich-ein-historischer-schatz-79233029.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/esslingen/besonderer-garten-in-kirchheim-verbirgt-sich-ein-historischer-schatz-79233029.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>„Benztown Battle Ship“ in Stuttgart : Die MS Wilhelma wird zum Hip-Hop-Schlachtschiff</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/benztown-battle-ship-in-stuttgart-die-ms-wilhelma-wird-zum-hip-hop-schlachtschiff-79361491.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/benztown-battle-ship-in-stuttgart-die-ms-wilhelma-wird-zum-hip-hop-schlachtschiff-79361491.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Tipps fürs Alleinsein : Alle weg, nur du nicht: Die besten Solo-Dates für den Spätsommer in Stuttgart</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/tipps-fuers-alleinsein-alle-weg-nur-du-nicht-die-besten-solo-dates-fuer-den-spaetsommer-in-stuttgart-79380337.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/tipps-fuers-alleinsein-alle-weg-nur-du-nicht-die-besten-solo-dates-fuer-den-spaetsommer-in-stuttgart-79380337.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Wochenendtipps für Stuttgart : Off Campus Party, Linoldruck Workshop und 10am Club</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/wochenendtipps-fuer-stuttgart-off-campus-party-linoldruck-workshop-und-10am-club-79371457.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/wochenendtipps-fuer-stuttgart-off-campus-party-linoldruck-workshop-und-10am-club-79371457.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Nach massiven Polizeikontrollen : Über ein Drittel aller Delikte in Stuttgart werden auf der B27 festgestellt</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/nach-massiven-polizeikontrollen-ueber-ein-drittel-aller-delikte-in-stuttgart-werden-auf-der-b27-festgestellt-79386361.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/nach-massiven-polizeikontrollen-ueber-ein-drittel-aller-delikte-in-stuttgart-werden-auf-der-b27-festgestellt-79386361.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Feuerwehreinsatz in Stuttgart-Rot : Flachdach in Brand geraten – Rauchsäule reicht weit in den Himmel</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/feuerwehreinsatz-in-stuttgart-rot-gebaeude-steht-in-brand-rauchsaeule-reicht-bis-weit-in-den-himmel-79385928.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/feuerwehreinsatz-in-stuttgart-rot-gebaeude-steht-in-brand-rauchsaeule-reicht-bis-weit-in-den-himmel-79385928.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Unfall auf der A81 bei Böblingen : VW Golf überschlägt sich und landet auf dem Dach</title>
-      <link>https://www.stuttgarter-zeitung.de/lokales/boeblingen/unfall-auf-der-a81-bei-boeblingen-vw-golf-ueberschlaegt-sich-und-landet-auf-dem-dach-79385864.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/boeblingen/unfall-auf-der-a81-bei-boeblingen-vw-golf-ueberschlaegt-sich-und-landet-auf-dem-dach-79385864.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>VfB Stuttgart News : Kurioses Eigentor bei der U21</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/vfb-stuttgart-news-naechstes-edelmetall-vfb-speerwerfer-gewinnt-silber-in-birmingham-79190751.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/vfb-stuttgart-news-naechstes-edelmetall-vfb-speerwerfer-gewinnt-silber-in-birmingham-79190751.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Landesliga-Heimpremiere : Glücksgriff des ASV Botnang: Der stürmende Verteidiger trifft doppelt</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/landesliga-heimpremiere-gluecksgriff-des-asv-botnang-der-stuermende-verteidiger-trifft-doppelt-79389034.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/landesliga-heimpremiere-gluecksgriff-des-asv-botnang-der-stuermende-verteidiger-trifft-doppelt-79389034.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Landesliga TSV Bernhausen : Spät, aber doch noch: Servi trifft im Privatduell mit dem Ex-Teamkollegen</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/landesliga-tsv-bernhausen-spaet-aber-doch-noch-servi-trifft-im-privatduell-mit-dem-ex-teamkollegen-79388976.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/landesliga-tsv-bernhausen-spaet-aber-doch-noch-servi-trifft-im-privatduell-mit-dem-ex-teamkollegen-79388976.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Fußball-Landesliga : Frust beim Gegner des TV Echterdingen: „Das ist eine bodenlose Frechheit“</title>
-      <link>https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/fussball-landesliga-frust-beim-gegner-des-tv-echterdingen-das-ist-eine-bodenlose-frechheit-79388946.html</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/lokalsport-region-stuttgart-filder/fussball-landesliga-frust-beim-gegner-des-tv-echterdingen-das-ist-eine-bodenlose-frechheit-79388946.html</guid>
-      <description />
-    </item>
-    <item>
-      <title>Erklärung zur Barrierefreiheit</title>
-      <link>https://www.stuttgarter-zeitung.de/barrierefreiheit/</link>
-      <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/barrierefreiheit/</guid>
-      <description />
-    </item>
+    
+<item>
+  <title>Baden-Württemberg</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/baden-wuerttemberg/</link>
+  <description><![CDATA[Mehrere Polizisten und Polizistinnen sind zurzeit mit Hunden in der Tübinger JVA im Einsatz. Was war passiert? Der Geruch von Thüringer Bratwurst und öligen Zweitakt-Abgasen liegt in der Luft: In Erpfingen treffen sich Fans von Ost-Fahrzeugen, sie verbindet die Liebe zu Trabi, Wolga, Schwalbe. Mit deutlich zu hohem Tempo soll ein Mann durch Wiesloch gerast sein. Feuerwehrleute befreien den splitternackten Mann aus dem Auto. Zu welchen Delikten die Polizei nun ermittelt. Manchmal geht es schnell...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/baden-wuerttemberg/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:19 +0000</pubDate>
+</item>
+<item>
+  <title>Politik</title>
+  <link>https://www.stuttgarter-zeitung.de/politik/</link>
+  <description><![CDATA[Auf deutschen Straßen geht es immer öfter aggressiv zu. Eine Studie hat erkundet, woran das liegt. Und warum Frauen ihren Frust anders abreagieren als Männer. Nicht jeder junge Mensch ohne Job sucht überhaupt einen. Ein Viertel der Betroffenen ist arbeitssuchend, aber 66 Prozent stehen dem Arbeitsmarkt gar nicht zur Verfügung. Welche Gründe stecken dahinter? Deutschland und die EU sollten Israel und die Palästinenser unterstützen, wenn es um die Frage nach politischen Lösungen gehe, sagte der...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/politik/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:19 +0000</pubDate>
+</item>
+<item>
+  <title>Wirtschaft</title>
+  <link>https://www.stuttgarter-zeitung.de/wirtschaft/</link>
+  <description><![CDATA[Die Mütterrente III bringt vielen Rentnern mehr Geld. Betroffene können jetzt prüfen, ob die Ansprüche richtig geltend gemacht wurden. Mit dem Verkauf an Madison Air will EBM-Papst den Zugang zum amerikanischen Markt stärken. Warum die Gesellschafterfamilien den Schritt als Wachstumschance sehen und was der KI-Boom damit zu tun hat. Stiftung Warentest setzt nach einem Girokonto-Test die Kostengrenze für günstige Konten bei 60 Euro im Jahr. Wer mehr zahlt, sollte einen Wechsel prüfen. Wenn...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/wirtschaft/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:19 +0000</pubDate>
+</item>
+<item>
+  <title>Sport</title>
+  <link>https://www.stuttgarter-zeitung.de/sport/</link>
+  <description><![CDATA[Jürgen Scholz, der Chef des Landessportverbandes Baden-Württemberg, freut sich über die Medaillen seiner Athletinnen und Athleten bei Großereignissen und lobt deren Haltung: „Sie haben Aufbruchstimmung verbreitet.“ Der Nationalstürmer zeigt sich in einem Video von seiner lockeren Seite und nennt den Champions-League-Gegner, gegen den er gerne spielen will. Von Darja Varfolomeev bis Leo Neugebauer, von Helen Kevric bis Michael Jung, von Linda Roth bis Nick Thumm: Athletinnen und Athleten aus der...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:20 +0000</pubDate>
+</item>
+<item>
+  <title>Kultur</title>
+  <link>https://www.stuttgarter-zeitung.de/kultur/</link>
+  <description><![CDATA[Die Darstellerin aus den USA steht schon als Kind vor der Kamera. Später prägt sie Serien wie „Heroes“ und „Nashville“ – und spricht offen über Sucht und Wochenbettdepressionen. Violet zelebrieren den Mainstream-Rock der 1980er. Bei ihrem „Klinke“-Gig am Samstag im Merlin zeigt die Band, warum sie das noch ziemlich weit bringen wird. Island feiert Karin Sander, Iris Dressler und Hans Christ haben mit dem Württembergischen Kunstverein erneut Großes vor. Hier sind unsere Tipps. Von „Ted Lasso“...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/kultur/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:21 +0000</pubDate>
+</item>
+<item>
+  <title>StZ Extra – Ihr tägliches Plus für den Alltag</title>
+  <link>https://www.stuttgarter-zeitung.de/stz-extra/</link>
+  <description><![CDATA[Sechs Tage, sechs Themen, sechs Geschichten – Extra ist Ihre exklusive Rubrik auf der Homepage der StZ. Hier finden Sie täglich Lesestoff, der über das Tagesgeschehen hinausgeht: inspirierend, informativ und emotional. Exklusiv für Sie als Abonnent. Illustrationen: Sebastian Ruckaberle]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/stz-extra/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:21 +0000</pubDate>
+</item>
+<item>
+  <title>Lokales</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/</link>
+  <description><![CDATA[Unter der Paulinenbrücke entsteht ein Interim für die Feuerwache 1. Die soll abgerissen und neu gebaut werden. Doch es fehlen wichtige Beschlüsse – und die Zeit drängt. Unbekannte haben in Zuffenhausen versucht, ein Vereinsgebäude in Brand zu setzen. Sie warfen Textilien durch ein gekipptes Fenster. Die Polizei sucht Zeugen. Stuttgart ist im Museum von Ferdinand Klein allgegenwärtig – dabei liegt es an der Nordsee. Der 32-Jährige hütet das Vermächtnis seines Vaters. In Stuttgart-Mühlhausen hat...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:23 +0000</pubDate>
+</item>
+<item>
+  <title>Polizei</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/polizeibericht/</link>
+  <description><![CDATA[Unbekannte haben in Ludwigsburg eine Flüssigkeit vor einem Hauseingang angezündet. Ein Bewohner wird durch Rauch leicht verletzt, die Polizei sucht Zeugen. Unbekannte haben in Zuffenhausen versucht, ein Vereinsgebäude in Brand zu setzen. Sie warfen Textilien durch ein gekipptes Fenster. Die Polizei sucht Zeugen. In Ludwigsburg gerät am Sonntag ein Poolgebäude auf einem Sportzentrumsgelände in Brand. Die Feuerwehr löscht die Flammen, die Brandursache ist noch unklar. In Stuttgart-Mühlhausen hat...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/polizeibericht/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:23 +0000</pubDate>
+</item>
+<item>
+  <title>Stadtkind</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/</link>
+  <description><![CDATA[Die Gen Z gilt schnell als faul oder empfindlich. Dabei kämpft sie oft einfach mit einem Alltag voller Druck, Sorgen und Zukunftsangst – denn Overthinking ist ein harmloses Wort für etwas, das sich selten harmlos anfühlt, findet unsere Autorin. Kein Urlaub, kein Problem – Stuttgart liefert dieses Wochenende von Donnerstag bis Sonntag jede Menge coole Events. Das sind unsere acht Tipps, die man nicht verpassen sollte. Louisa Dellert zeigt in ihrem neuen Buch „Unshame“, warum Schönheitsideale...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/stadtkind/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:24 +0000</pubDate>
+</item>
+<item>
+  <title>Lebensqualität durch Medizin</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/stuttgart/medizin/</link>
+  <description><![CDATA[Vorbeugen, erkennen, behandeln: Hier teilen Spitzenmediziner und Experten des Robert Bosch Krankenhauses (RBK) ihr Wissen über Medizin, Gesundheit und Innovationen - von der Geburt bis zum gesunden Altern. Sonderveröffentlichung]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/stuttgart/medizin/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:25 +0000</pubDate>
+</item>
+<item>
+  <title>Ja, ich will – der Hochzeitsguide für Stuttgart und Region</title>
+  <link>https://www.stuttgarter-zeitung.de/hochzeitswelt/</link>
+  <description><![CDATA[Hilfreiche Tipps für die Hochzeitsplanung, für Brautpaare und frisch Verlobte: Zahlreiche Inspirationen für den schönsten Tag im Leben: Von Traumlocations über Blumendeko bis zur Hochzeitstorte. Sonderveröffentlichung]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/hochzeitswelt/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:25 +0000</pubDate>
+</item>
+<item>
+  <title>Böblingen</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/boeblingen/</link>
+  <description><![CDATA[Die ehrenamtlichen Hoheiten unterstützen bei der Vermarktung der Streuobstkultur im Kreis Böblingen. Der Posten der unterstützenden Streuobstprinzessin wird abgeschafft. Der Verkauf des Böblinger Märchenbuchs startet: Sechs Geschichten von lokalen Autoren interpretieren alte Sagen der Stadt neu. Der Erlös fließt an die Bürgerstiftung. Mehr als 7000 Menschen haben sich bereits vor Semesterstart bei der VHS Böblingen-Sindelfingen angemeldet. 2300 Kurse stehen zur Verfügung, darunter auch einige...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/boeblingen/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:25 +0000</pubDate>
+</item>
+<item>
+  <title>Esslingen</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/esslingen/</link>
+  <description><![CDATA[Im Kreis Esslingen sind kurz vor dem Ausbildungsstart noch viele Stellen unbesetzt – Gewerkschaft und Arbeitgeber ermutigen Jugendliche zur Bewerbung. Historische Fahrzeuge aller Art waren am Wochenende im Freilichtmuseum zu sehen. Im Mittelpunkt standen diesmal Familienautos von einst. Das bundesweite Programm „Menschen stärken Menschen" soll nur noch abgewickelt werden – Esslingens Abgeordneter Sebastian Schäfer kündigt Widerstand im Haushaltsverfahren an. Neuer Wohnraum, Klimaschutz, weniger...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/esslingen/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:26 +0000</pubDate>
+</item>
+<item>
+  <title>Leonberg</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/leonberg/</link>
+  <description><![CDATA[Anwohner der Stuttgarter Straße beobachten massiven Schwerlastverkehr auf einer wichtigen Schulroute. Eine Mutter sorgt sich wegen der Kipplaster um die Sicherheit. Warum die Stadt Leonberg hier kaum eine Handhabe hat. In einer Tiefgarage in Leonberg stehlen Unbekannte drei hochwertige Pedelecs. Der Schaden ist hoch, die Polizei sucht Zeugen. Im Schloss Schöckingen geben sich Weltstars und Manager die Klinke in die Hand. Nun will Schlossherr Alexander Osterwald das exklusive Anwesen für Bürger...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/leonberg/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:26 +0000</pubDate>
+</item>
+<item>
+  <title>Ludwigsburg</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/ludwigsburg/</link>
+  <description><![CDATA[Unbekannte haben in Ludwigsburg eine Flüssigkeit vor einem Hauseingang angezündet. Ein Bewohner wird durch Rauch leicht verletzt, die Polizei sucht Zeugen. In Ludwigsburg gerät am Sonntag ein Poolgebäude auf einem Sportzentrumsgelände in Brand. Die Feuerwehr löscht die Flammen, die Brandursache ist noch unklar. Wenige Wochen nach seiner Ernennung zum Bundesverkehrsminister tourt Steffen Bilger durch seinen Wahlkreis – und spricht über die Zukunft der Sportplätze und kluge Investitionen. Seit 76...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/ludwigsburg/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:28 +0000</pubDate>
+</item>
+<item>
+  <title>Rems-Murr-Kreis</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/rems-murr-kreis/</link>
+  <description><![CDATA[Der ICE-Sprinter verschärft den Kampf um Fahrplantrassen zwischen Backnang und Schwäbisch Hall. Trotzdem lehnt der Bund einen zweigleisigen Ausbau der Strecke ab. Die Kulturgemeinschaft Fellbach präsentiert ihr Herbstprogramm. Zu Gast sind Helga Schubert, der Historiker Norbert Frei, die Sängerin Eva Zalenga und die Geigerin Christine Busch. Wegen des angedrohten Suizids eines älteren Mannes rückten am Montagvormittag Polizei und Rettungskräfte mit einem Großaufgebot in ein Waiblinger...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/rems-murr-kreis/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:28 +0000</pubDate>
+</item>
+<item>
+  <title>Göppingen</title>
+  <link>https://www.stuttgarter-zeitung.de/lokales/goeppingen/</link>
+  <description><![CDATA[Ein Schlaganfall im vergangenen Herbst änderte den Alltag von Martin Hohneker dramatisch. Beharrlich kämpft er sich ins Leben zurück. Dabei begleitet ihn die ausgebildete Schlaganfall-Helferin Madeleine Sonntag. Unvorstellbar groß ist der Berg des recycelbaren Materials, das Ingeborg Lindauer in den vergangenen vier Jahren für die gute Sache gesammelt hat. Das VW Käfer-Team Göppingen blickt auf ein halbes Jahrhundert Vereinsgeschichte zurück. Zum Jubiläum haben sich am Wochenende hunderte...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/lokales/goeppingen/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:29 +0000</pubDate>
+</item>
+<item>
+  <title>Auto</title>
+  <link>https://www.stuttgarter-zeitung.de/fokus/auto/</link>
+  <description><![CDATA[Axel Röckle, der Fraktionschef der Freien Wähler in Leonberg, sieht für die Entwicklung weiterer Wohngebiete gewaltige Hürden. Beim Thema Krankenhaus bleibt er sehr misstrauisch. Mercedes baut Kecskemét massiv aus und produziert dort viel billiger als in Deutschland. Doch nicht nur die Energiekrise zeigt, dass der Standort auch seine Tücken hat. In Stuttgart fahren 5,3 Prozent aller Autos elektrisch – mehr als in jeder anderen deutschen Großstadt. Das zeigt das aktuelle HUK-E-Barometer. Vor dem...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/fokus/auto/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:30 +0000</pubDate>
+</item>
+<item>
+  <title>Familie</title>
+  <link>https://www.stuttgarter-zeitung.de/fokus/familie/</link>
+  <description><![CDATA[Eltern sparen oft jahrelang für die Ausbildung ihrer Kinder – und gefährden damit ungewollt deren Bafög-Anspruch. Aber es gibt einen Ausweg. Grafenaus Revierförster Thomas Widmayer kennt den Wald wie seine Westentasche – und zeigt Kindern jedes Jahr im Rahmen des Sommerferienprogramms, was ihn dort so fasziniert. In und um Leonberg gibt es zahlreiche Angebote, die das Urlaubsbudget schonen. Von interaktiven Waldpfaden bis zum Mammutzahn im Museum ist für jedes Alter etwas dabei. Aus...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/fokus/familie/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:30 +0000</pubDate>
+</item>
+<item>
+  <title>MeinVfB</title>
+  <link>https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/</link>
+  <description><![CDATA[Der Nationalstürmer zeigt sich in einem Video von seiner lockeren Seite und nennt den Champions-League-Gegner, gegen den er gerne spielen will. VfB heute: Bundesliga, Tabelle, Videos, Bilder, Social Media – unser Newsblog ist immer aktuell und begleitet das Team durch die Saison. Der VfB Stuttgart steigt am Freitag in Rostock in den Pflichtspielbetrieb ein. Wie viele Plätze in der Startelf sind schon vergeben? Der Speerwerfer Nick Thumm holt überraschend Silber bei der EM – und damit in...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:31 +0000</pubDate>
+</item>
+<item>
+  <title>Pendler</title>
+  <link>https://www.stuttgarter-zeitung.de/fokus/pendler/</link>
+  <description><![CDATA[Erst monatelang gesperrt, nun wieder eine Baustelle nahe der Uni Hohenheim: An der Ecke Filderhauptstraße/Adornostraße ist erneut ein Bagger angerückt. Ein Anwohner erhielt zunächst keine Antwort. Der Straßentunnel unter dem Flughafen Stuttgart soll für eine Sanierung mehr als ein halbes Jahr lang gesperrt werden. Doch ein Auftrag für die Arbeiten konnte bislang nicht vergeben werden. Während es für die Neue Mitte Fellbach selbst keine große Überdachung gibt, bleibt man künftig zumindest beim...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/fokus/pendler/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:32 +0000</pubDate>
+</item>
+<item>
+  <title>StZ schmeckt</title>
+  <link>https://www.stuttgarter-zeitung.de/fokus/stz-schmeckt/</link>
+  <description><![CDATA[Unverpackt-Läden sind gekommen und wieder gegangen - nur Schüttgut im Stuttgarter Westen ist geblieben. Claudia und Jens-Peter Wedlich lassen sich von ihrer Mission nicht abbringen. Freddo Cappuccino am Morgen und Espresso Martini am Abend: Die Cafébar Mab Room ist neu im Stuttgarter Westen und will ein Ort der Begegnung sein. Erkan Kücüksolak aus Hemmingen macht aus dem früheren Burgerladen in der Brennereistraße ein Grillhaus, in dem er Döner und mehr serviert. Der Gastrobetrieb ist nicht...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/fokus/stz-schmeckt/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:32 +0000</pubDate>
+</item>
+<item>
+  <title>MeineKickers</title>
+  <link>https://www.stuttgarter-zeitung.de/sport/stuttgarter-kickers/</link>
+  <description><![CDATA[Die Favoriten haben sich im diesjährigen WFV-Pokal-Wettbewerb durchgesetzt. Nun müssen der SSV Ulm 1846 und der VfR Aalen noch nachziehen – dann ist das Achtelfinale komplett, das am Mittwoch ausgelost wird. In unserem Newsblog halten wir die Fans der Stuttgarter Kickers mit Neuigkeiten rund um das Team, Ligarivalen und ehemalige Spieler auf dem Laufenden. Die Stuttgarter Kickers verspielen erst leichtfertig eine 2:0-Führung, doch Trainer Holger Bachthaler wechselt die richtigen Spieler ein –...]]></description>
+  <guid isPermaLink="true">https://www.stuttgarter-zeitung.de/sport/stuttgarter-kickers/</guid>
+  <pubDate>Mon, 17 Aug 2026 13:13:33 +0000</pubDate>
+</item>
   </channel>
 </rss>
