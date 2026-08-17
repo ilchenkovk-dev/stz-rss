@@ -5,11 +5,7 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin
 import xml.etree.ElementTree as ET
 
-# --------------------------------------------------
-# Настройки
-# --------------------------------------------------
-
-SOURCE_URL = "https://www.stuttgarter-zeitung.de/stuttgart/"
+SOURCE_URL = "https://www.stuttgarter-zeitung.de/lokales/stuttgart/"
 OUTPUT_FILE = "stuttgart.xml"
 
 MAX_ITEMS = 50
@@ -22,10 +18,6 @@ HEADERS = {
     )
 }
 
-# --------------------------------------------------
-# Получаем страницу Stuttgarter Zeitung
-# --------------------------------------------------
-
 response = requests.get(
     SOURCE_URL,
     headers=HEADERS,
@@ -35,10 +27,6 @@ response = requests.get(
 response.raise_for_status()
 
 soup = BeautifulSoup(response.text, "html.parser")
-
-# --------------------------------------------------
-# Создаём RSS
-# --------------------------------------------------
 
 rss = ET.Element(
     "rss",
@@ -50,9 +38,15 @@ rss = ET.Element(
 
 channel = ET.SubElement(rss, "channel")
 
-ET.SubElement(channel, "title").text = "Stuttgarter Zeitung – Stuttgart"
+ET.SubElement(
+    channel,
+    "title"
+).text = "Stuttgarter Zeitung – Stuttgart"
 
-ET.SubElement(channel, "link").text = SOURCE_URL
+ET.SubElement(
+    channel,
+    "link"
+).text = SOURCE_URL
 
 ET.SubElement(
     channel,
@@ -71,62 +65,69 @@ ET.SubElement(
     datetime.now(timezone.utc)
 )
 
-# --------------------------------------------------
-# Ищем статьи
-# --------------------------------------------------
-
 articles = []
+seen_links = set()
 
-for article in soup.find_all("article"):
+for link_tag in soup.find_all("a", href=True):
 
-    link_tag = article.find("a", href=True)
+    href = link_tag["href"]
 
-    if not link_tag:
+    link = urljoin(SOURCE_URL, href)
+
+    if not link.startswith(
+        "https://www.stuttgarter-zeitung.de/"
+    ):
         continue
 
-    title_tag = article.find(["h1", "h2", "h3", "h4"])
-
-    if not title_tag:
+    if link in seen_links:
         continue
 
-    title = title_tag.get_text(" ", strip=True)
+    title_tag = link_tag.find(
+        ["h1", "h2", "h3", "h4"]
+    )
+
+    if title_tag:
+        title = title_tag.get_text(
+            " ",
+            strip=True
+        )
+    else:
+        title = link_tag.get_text(
+            " ",
+            strip=True
+        )
 
     if not title:
         continue
 
-    link = urljoin(SOURCE_URL, link_tag["href"])
-
-    if not link.startswith("https://www.stuttgarter-zeitung.de/"):
+    if len(title) < 15:
         continue
 
-    if link in [item["link"] for item in articles]:
+    if len(title) > 250:
         continue
 
-    description = ""
-
-    paragraph = article.find("p")
-
-    if paragraph:
-        description = paragraph.get_text(" ", strip=True)
+    if link.rstrip("/") == SOURCE_URL.rstrip("/"):
+        continue
 
     articles.append(
         {
             "title": title,
             "link": link,
-            "description": description
+            "description": ""
         }
     )
+
+    seen_links.add(link)
 
     if len(articles) >= MAX_ITEMS:
         break
 
-# --------------------------------------------------
-# Добавляем статьи в RSS
-# --------------------------------------------------
-
 for article in articles:
 
-    item = ET.SubElement(channel, "item")
+    item = ET.SubElement(
+        channel,
+        "item"
+    )
 
     ET.SubElement(
         item,
@@ -149,13 +150,12 @@ for article in articles:
         "description"
     ).text = article["description"]
 
-# --------------------------------------------------
-# Сохраняем RSS-файл
-# --------------------------------------------------
-
 tree = ET.ElementTree(rss)
 
-ET.indent(tree, space="  ")
+ET.indent(
+    tree,
+    space="  "
+)
 
 tree.write(
     OUTPUT_FILE,
@@ -164,6 +164,6 @@ tree.write(
 )
 
 print(
-    f"RSS создан: {OUTPUT_FILE}. "
-    f"Найдено статей: {len(articles)}"
+    f"RSS erstellt: {OUTPUT_FILE}. "
+    f"Gefundene Artikel: {len(articles)}"
 )
