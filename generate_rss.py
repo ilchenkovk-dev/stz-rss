@@ -6,13 +6,8 @@ import time
 import traceback
 
 
-# --------------------------------------------------
-# Настройки
-# --------------------------------------------------
-
 SOURCE_URL = "https://www.stuttgarter-zeitung.de/lokales/stuttgart/"
 OUTPUT_FILE = "stuttgart.xml"
-
 MAX_ITEMS = 30
 
 headers = {
@@ -25,7 +20,7 @@ headers = {
 
 
 # --------------------------------------------------
-# Получаем страницу Stuttgart
+# Загружаем страницу раздела
 # --------------------------------------------------
 
 try:
@@ -49,246 +44,311 @@ except Exception:
 
 
 # --------------------------------------------------
-# Ищем ссылки на статьи
+# Ищем статьи
 # --------------------------------------------------
 
+items = []
 seen = set()
-articles = []
 
 for a in soup.find_all("a", href=True):
 
     href = a.get("href")
     link = urljoin(SOURCE_URL, href)
 
-    # Только ссылки Stuttgarter Zeitung
+    # Только Stuttgarter Zeitung
     if not link.startswith(
         "https://www.stuttgarter-zeitung.de/"
     ):
         continue
 
-    # Не берём сам раздел Stuttgart
-    if link.rstrip("/") == SOURCE_URL.rstrip("/"):
+    # Не берём ссылки на разделы
+    if link.rstrip("/") in [
+        "https://www.stuttgarter-zeitung.de",
+        "https://www.stuttgarter-zeitung.de/lokales",
+        "https://www.stuttgarter-zeitung.de/lokales/stuttgart",
+        "https://www.stuttgarter-zeitung.de/politik",
+        "https://www.stuttgarter-zeitung.de/wirtschaft",
+        "https://www.stuttgarter-zeitung.de/sport",
+        "https://www.stuttgarter-zeitung.de/kultur",
+    ]:
         continue
 
-    # Не обрабатываем одну и ту же ссылку несколько раз
+    # Для статьи StZ характерен URL с .html
+    if not link.endswith(".html"):
+        continue
+
     if link in seen:
         continue
 
     seen.add(link)
 
-    # Текст ссылки нам здесь не нужен.
-    # Настоящий заголовок возьмём со страницы статьи.
+    # ------------------------------------------------
+    # Содержимое ссылки
+    # ------------------------------------------------
 
-    articles.append(link)
+    text = a.get_text(
+        " ",
+        strip=True
+    )
 
-    if len(articles) >= MAX_ITEMS:
-        break
+    if not text:
+        continue
 
+    # Убираем лишние пробелы
+    text = " ".join(text.split())
 
-print(
-    f"Found {len(articles)} possible article links"
-)
+    # ------------------------------------------------
+    # Пытаемся определить заголовок
+    #
+    # В актуальном HTML StZ внутри ссылки могут
+    # находиться несколько текстовых частей:
+    #
+    # надзаголовок
+    # основной заголовок
+    # описание
+    # регион
+    #
+    # Поэтому отдельно ищем заголовочные элементы.
+    # ------------------------------------------------
 
+    title = ""
 
-# --------------------------------------------------
-# Получаем содержимое каждой статьи
-# --------------------------------------------------
+    for tag in a.find_all(
+        ["h1", "h2", "h3", "h4", "h5"]
+    ):
 
-items = []
-
-for href in articles:
-
-    try:
-
-        print("Processing:", href)
-
-        art_res = requests.get(
-            href,
-            headers=headers,
-            timeout=15
-        )
-
-        art_res.raise_for_status()
-
-        art_soup = BeautifulSoup(
-            art_res.text,
-            "html.parser"
-        )
-
-        # ------------------------------------------
-        # Ищем настоящий заголовок статьи
-        # ------------------------------------------
-
-        article_title = art_soup.find("h1")
-
-        if not article_title:
-            print("NO H1:", href)
-            continue
-
-        title = article_title.get_text(
+        candidate = tag.get_text(
             " ",
             strip=True
         )
 
-        if not title:
-            continue
+        candidate = " ".join(
+            candidate.split()
+        )
 
-        # ------------------------------------------
-        # Удаляем ненужные элементы
-        # ------------------------------------------
+        if len(candidate) >= 15:
+            title = candidate
+            break
 
-        for trash in art_soup.find_all(
-            [
-                "nav",
-                "header",
-                "footer",
-                "script",
-                "style",
-                "aside",
-                "form"
-            ]
+    # Если заголовочного элемента нет,
+    # пробуем получить title из aria-label
+    if not title:
+
+        aria = a.get("aria-label")
+
+        if aria:
+            title = " ".join(
+                aria.split()
+            )
+
+    # Если ничего не нашли — пропускаем
+    if not title:
+        continue
+
+    # Слишком короткие/служебные элементы
+    if len(title) < 15:
+        continue
+
+    # ------------------------------------------------
+    # Получаем описание
+    # ------------------------------------------------
+
+    description = ""
+
+    # Ищем p внутри ссылки
+    paragraphs = []
+
+    for p in a.find_all("p"):
+
+        p_text = p.get_text(
+            " ",
+            strip=True
+        )
+
+        p_text = " ".join(
+            p_text.split()
+        )
+
+        if len(p_text) >= 30:
+            paragraphs.append(p_text)
+
+    if paragraphs:
+        description = " ".join(
+            paragraphs
+        )
+
+    # ------------------------------------------------
+    # Если <p> нет, пробуем текстовые элементы
+    # ------------------------------------------------
+
+    if not description:
+
+        candidates = []
+
+        for tag in a.find_all(
+            ["div", "span"]
         ):
-            trash.decompose()
 
-        # ------------------------------------------
-        # Ищем текст статьи
-        # ------------------------------------------
+            candidate = tag.get_text(
+                " ",
+                strip=True
+            )
 
-        paragraphs = []
+            candidate = " ".join(
+                candidate.split()
+            )
 
-        # Вариант 1:
-        # ищем контейнер вокруг H1
-        parent = article_title.find_parent()
+            if (
+                len(candidate) >= 50
+                and candidate != title
+            ):
+                candidates.append(candidate)
 
-        if parent:
+        if candidates:
+            # Берём самый короткий подходящий текст,
+            # чтобы не захватить весь блок целиком.
+            candidates.sort(
+                key=len
+            )
 
-            for p in parent.find_all("p"):
+            description = candidates[0]
 
-                text = p.get_text(
-                    " ",
-                    strip=True
-                )
+    # ------------------------------------------------
+    # Если описание не нашли,
+    # пробуем открыть саму статью
+    # ------------------------------------------------
 
-                if len(text) > 30:
-                    paragraphs.append(text)
+    if not description:
 
-        # ------------------------------------------
-        # Вариант 2:
-        # если текста около H1 не нашли,
-        # ищем типичные контейнеры статьи
-        # ------------------------------------------
+        try:
 
-        if not paragraphs:
+            article_response = requests.get(
+                link,
+                headers=headers,
+                timeout=15
+            )
 
-            selectors = [
-                "article",
-                '[class*="article"]',
-                '[class*="content"]',
-                '[class*="text"]',
-                "main"
-            ]
+            article_response.raise_for_status()
 
-            for selector in selectors:
+            article_soup = BeautifulSoup(
+                article_response.text,
+                "html.parser"
+            )
 
-                content = art_soup.select_one(
-                    selector
-                )
+            article_h1 = article_soup.find("h1")
 
-                if not content:
-                    continue
+            # Удаляем ненужное
+            for trash in article_soup.find_all(
+                [
+                    "nav",
+                    "header",
+                    "footer",
+                    "script",
+                    "style",
+                    "aside",
+                    "form"
+                ]
+            ):
+                trash.decompose()
 
-                for p in content.find_all("p"):
+            paragraphs = []
 
-                    text = p.get_text(
+            if article_h1:
+
+                parent = article_h1.find_parent()
+
+                if parent:
+
+                    for p in parent.find_all("p"):
+
+                        p_text = p.get_text(
+                            " ",
+                            strip=True
+                        )
+
+                        if len(p_text) > 30:
+                            paragraphs.append(
+                                p_text
+                            )
+
+            if not paragraphs:
+
+                for p in article_soup.find_all("p"):
+
+                    p_text = p.get_text(
                         " ",
                         strip=True
                     )
 
-                    if len(text) > 30:
-                        paragraphs.append(text)
+                    if len(p_text) > 30:
+                        paragraphs.append(
+                            p_text
+                        )
 
-                if paragraphs:
-                    break
+            if paragraphs:
 
-        # ------------------------------------------
-        # Убираем дубли абзацев
-        # ------------------------------------------
+                description = " ".join(
+                    paragraphs
+                )
 
-        clean_paragraphs = []
+        except Exception as e:
 
-        for text in paragraphs:
-
-            if text not in clean_paragraphs:
-                clean_paragraphs.append(text)
-
-        # ------------------------------------------
-        # Формируем описание
-        # ------------------------------------------
-
-        desc = " ".join(
-            clean_paragraphs
-        )
-
-        desc = desc.strip()
-
-        if len(desc) > 500:
-            desc = desc[:500].rsplit(
-                " ",
-                1
-            )[0] + "..."
-
-        if not desc:
             print(
-                "NO ARTICLE TEXT:",
-                href
+                "ARTICLE FETCH FAILED:",
+                link,
+                repr(e)
             )
-            continue
 
-        # ------------------------------------------
-        # Дата
-        # ------------------------------------------
+    # ------------------------------------------------
+    # Финальная очистка description
+    # ------------------------------------------------
 
-        pub_date = time.strftime(
-            "%a, %d %b %Y %H:%M:%S +0000",
-            time.gmtime()
+    description = " ".join(
+        description.split()
+    )
+
+    if len(description) > 600:
+
+        description = (
+            description[:600]
+            .rsplit(" ", 1)[0]
+            + "..."
         )
 
-        # ------------------------------------------
-        # RSS item
-        # ------------------------------------------
+    if not description:
+        description = title
 
-        items.append(
-            f"""
+    # ------------------------------------------------
+    # RSS item
+    # ------------------------------------------------
+
+    pub_date = time.strftime(
+        "%a, %d %b %Y %H:%M:%S +0000",
+        time.gmtime()
+    )
+
+    items.append(
+        f"""
 <item>
   <title>{escape(title)}</title>
-  <link>{escape(href)}</link>
-  <description><![CDATA[{desc}]]></description>
-  <guid isPermaLink="true">{escape(href)}</guid>
+  <link>{escape(link)}</link>
+  <description><![CDATA[{description}]]></description>
+  <guid isPermaLink="true">{escape(link)}</guid>
   <pubDate>{pub_date}</pubDate>
 </item>"""
-        )
+    )
 
-        print(
-            "OK:",
-            title
-        )
+    print(
+        "ADDED:",
+        title
+    )
 
-    except Exception as e:
-
-        print(
-            "ARTICLE FETCH FAILED:",
-            href
-        )
-
-        print(
-            repr(e)
-        )
-
-        continue
+    if len(items) >= MAX_ITEMS:
+        break
 
 
 # --------------------------------------------------
-# Создаём RSS
+# RSS
 # --------------------------------------------------
 
 rss = f'''<?xml version="1.0" encoding="UTF-8"?>
@@ -303,10 +363,6 @@ rss = f'''<?xml version="1.0" encoding="UTF-8"?>
 </rss>
 '''
 
-
-# --------------------------------------------------
-# Сохраняем RSS
-# --------------------------------------------------
 
 with open(
     OUTPUT_FILE,
