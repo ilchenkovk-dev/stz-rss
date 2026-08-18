@@ -25,12 +25,14 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate RSS
-        run: python generate_rss.py
+        run: |
+          python generate_rss.py
+          python generate_wirtschaft_rss.py
 
       - name: Save RSS
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add stuttgart.xml
+          git add stuttgart.xml wirtschaft.xml
           git diff --cached --quiet || git commit -m "Update Stuttgart RSS"
           git push
